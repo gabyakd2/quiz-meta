@@ -7,20 +7,28 @@ import imageMenu2 from "../images/imageMenu2.jpg";
 
 function Menu() {
   return (
-    <div className="">
-      <h1>Título del Quiz</h1>
-      <div className="flex">
-        <ListboxWrapper>
-          <Listbox aria-label="Actions">
-            <ListboxItem key="new">New file</ListboxItem>
-            <ListboxItem key="copy">Copy link</ListboxItem>
-            <ListboxItem key="edit">Edit file</ListboxItem>
-            <ListboxItem key="delete" className="text-danger" color="danger">
-              Delete file
-            </ListboxItem>
-          </Listbox>
-        </ListboxWrapper>
-        <Image src={imageMenu2} alt="Image of Menu" width="700" />
+    <div className="mx-auto p-4 max-w-screen-lg">
+      <div className="flex flex-col md:flex-row h-full">
+        <div className="flex flex-col justify-between md:w-2/3">
+          <h1 className="text-5xl font-bold mb-5 md:mb-0">
+            ¿Cuánto sabes de juegos?
+          </h1>
+          <ListboxWrapper>
+            <Listbox>
+              <ListboxItem key="delete" className="text-danger" color="danger">
+                Iniciar Quiz
+              </ListboxItem>
+              <ListboxItem key="copy">Linkedin</ListboxItem>
+              <ListboxItem key="edit">Github</ListboxItem>
+            </Listbox>
+          </ListboxWrapper>
+        </div>
+        <Image
+          src={imageMenu2}
+          alt="Image of Menu"
+          width="600"
+          className="rounded-3xl mt-5 md:mt-0"
+        />
       </div>
     </div>
   );
