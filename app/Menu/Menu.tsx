@@ -4,15 +4,18 @@ import { Listbox, ListboxItem } from "@nextui-org/react";
 import ListboxWrapper from "./components/ListboxWrapper";
 import Image from "next/image";
 import imageMenu2 from "../images/imageMenu2.jpg";
+import {ButtonReqAcc, ButtonConnMeta} from "./components/"
 
 function Menu() {
   return (
     <div className="mx-auto p-4 max-w-screen-lg">
       <div className="flex flex-col md:flex-row h-full">
         <div className="flex flex-col justify-between md:w-2/3">
-          <h1 className="text-5xl font-bold mb-5 md:mb-0">
-            ¿Cuánto sabes de juegos?
-          </h1>
+          <div>
+            <h1 className="text-5xl font-bold mb-5 md:mb-5">¿How much you know of games?</h1>
+            <ButtonReqAcc />
+            <ButtonConnMeta />
+          </div>
           <ListboxWrapper>
             <Listbox>
               <ListboxItem key="delete" className="text-danger" color="danger">
