@@ -4,7 +4,8 @@ import { Listbox, ListboxItem } from "@nextui-org/react";
 import ListboxWrapper from "./components/ListboxWrapper";
 import Image from "next/image";
 import imageMenu2 from "../images/imageMenu2.jpg";
-import {ButtonReqAcc, ButtonConnMeta} from "./components/"
+import {ButtonReqAcc} from "./components/"
+import Link from "next/link";
 
 function Menu() {
   return (
@@ -14,12 +15,14 @@ function Menu() {
           <div>
             <h1 className="text-5xl font-bold mb-5 md:mb-5">¿How much you know of games?</h1>
             <ButtonReqAcc />
-            <ButtonConnMeta />
+            {/* <ButtonConnMeta /> */}
           </div>
           <ListboxWrapper>
             <Listbox>
               <ListboxItem key="delete" className="text-danger" color="danger">
-                Iniciar Quiz
+                <Link href="/quiz">
+                Start Quiz
+                </Link>
               </ListboxItem>
               <ListboxItem key="copy">Linkedin</ListboxItem>
               <ListboxItem key="edit">Github</ListboxItem>
