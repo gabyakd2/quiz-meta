@@ -1,8 +1,11 @@
 import React from "react";
+import QandA from "./components/QandA";
 
 function QuizPage() {
   return (
-    <div>page</div>
+    <div>
+      <QandA />
+    </div>
   )
 }
 
